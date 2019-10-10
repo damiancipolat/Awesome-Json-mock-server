@@ -1,4 +1,5 @@
 const process = require('process');
+const config  = require('config');
 
 //On server internal error.
 const onServerError = ()=>{
@@ -11,7 +12,7 @@ const onServerError = ()=>{
 const onListen = (port)=>{
 
   console.log('ᕦ(ò_óˇ)ᕤ - Mock server');
-  console.log(`Running on port:${port}`);
+  console.log(`Running on port: ${port} - mock file: ${config.get('mockFile')}`);
   
 }
 

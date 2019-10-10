@@ -1,0 +1,43 @@
+{
+  "models":{
+    "hello":[
+      {
+        "hola": "mundo"
+      },
+      {
+        "hola": "ketal"
+      }      
+    ]
+  },
+  "routes":[
+    {
+      "type":"POST",
+      "path":"/test",
+      "response":{
+        "isMatch":true,
+        "options":[
+          {
+            "matchWith":{
+              "box": "1111",
+              "product_id": "90062105"
+            },
+            "response":{
+              "http":200,
+              "model":"hello:0"
+            }
+          },
+          {
+            "matchWith":{
+              "box": "3333",
+              "product_id": "90062105"
+            },
+            "response":{
+              "http":200,
+              "model":"hello:1"
+            }
+          }
+        ]
+      }
+    }    
+  ]
+}

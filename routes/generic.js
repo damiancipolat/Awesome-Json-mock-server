@@ -1,5 +1,6 @@
 //Load base mocks.
-const mocks = require('../mocks/base.json');
+const config = require('config');
+const mocks  = require('../mocks/'+config.get('mockFile'));
 
 const {
   isEquivalent

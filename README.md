@@ -5,8 +5,14 @@ This project is to provide a mock server to accompany the development of a websi
 
 Set server port, go to /config/default.json
 ```json
-{"port":3000}
+{
+  "port":3000,
+  "mockFile":"base.json"
+}
 ```
+port: server bind socket port.
+mockFile: is the file used to load the mock metadata.
+
 
 To install:
 ```sh

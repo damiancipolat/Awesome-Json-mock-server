@@ -56,7 +56,7 @@ Are the responses to be used in the api rest server, an example is the next:
 - **ROUTES**:
 This sections are the differents routes of the api rest, there are 3 differents way to handle a response.
 
-- **RANDOM**: Match url vs model and get some random response.
+**RANDOM**: Match url vs model and get some random response.
 
 ```json
 {
@@ -73,7 +73,7 @@ This sections are the differents routes of the api rest, there are 3 differents 
 }
 ```
 
-- **DIRECT**: Match route vs model.
+**DIRECT**: Match route vs model.
 
 ```json
 {
@@ -89,7 +89,7 @@ This sections are the differents routes of the api rest, there are 3 differents 
 }
 ```
 
-- **MATCH**: Match route and body request vs model.
+**MATCH**: Match route and body request vs model.
 
 ```json
 {

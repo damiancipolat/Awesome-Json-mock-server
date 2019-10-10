@@ -56,7 +56,8 @@ Are the responses to be used in the api rest server, an example is the next:
 - **ROUTES**:
 This sections are the differents routes of the api rest, there are 3 differents way to handle a response.
 
-- RANDOM: Match url vs model and get some random response.
+- **RANDOM**: Match url vs model and get some random response.
+
 ```json
 {
   "routes":[
@@ -64,14 +65,15 @@ This sections are the differents routes of the api rest, there are 3 differents 
       "type":"GET",
       "path":"/matrix",
       "response":{
-        "model":"dogs:0"
+        "isRandom":true,
+        "model":"dogs"
       }
     }
   ]
 }
 ```
 
-- DIRECT: Match route vs model.
+- **DIRECT**: Match route vs model.
 
 ```json
 {
@@ -80,23 +82,39 @@ This sections are the differents routes of the api rest, there are 3 differents 
       "type":"GET",
       "path":"/matrix",
       "response":{
-        "model":"dogs:0"
+        "model":"dogs"
       }
     }
   ]
 }
 ```
 
-- MATCH: Match route vs model.
+- **MATCH**: Match route and body request vs model.
 
 ```json
 {
   "routes":[
     {
-      "type":"GET",
+      "type":"POST",
       "path":"/matrix",
       "response":{
-        "model":"dogs:0"
+        "isMatch":true,
+        "options":[
+          {
+            "matchWith":{"name":"damian"},
+            "response":{
+              "http":506,
+              "model":"dogs:0"
+            }
+          },
+          {
+            "matchWith":{"name":"pepito"},
+            "response":{
+              "http":406,
+              "model":"dogs:1"
+            }
+          }          
+        ]
       }
     }
   ]

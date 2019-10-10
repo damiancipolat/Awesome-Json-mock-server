@@ -1,11 +1,13 @@
 # Json-mock-server
 
-#### How to install?
-Run this command
+#### Configuration / Run
 
+To install:
 ```sh
 $ npm install
+```
 
 To run:
+```sh
 $ npm start
 ```

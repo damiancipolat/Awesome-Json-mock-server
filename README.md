@@ -31,3 +31,73 @@ This is the file format, is divided in models and routes.
   "routes":[...]
 }
 ```
+- **MODELS**:
+Are the responses to be used in the api rest server, an example is the next:
+
+```json
+{
+  "models":{
+    "dogs":[
+      {
+        "name":"chispas",
+        "country":"england",
+        "colour":"brown"
+      },
+      {
+        "name":"billy",
+        "country":"usa",
+        "colour":"gray"
+      }      
+    ]
+  }
+}
+```
+
+- **ROUTES**:
+This sections are the differents routes of the api rest, there are 3 differents way to handle a response.
+
+- RANDOM: Match url vs model and get some random response.
+```json
+{
+  "routes":[
+    {
+      "type":"GET",
+      "path":"/matrix",
+      "response":{
+        "model":"dogs:0"
+      }
+    }
+  ]
+}
+```
+
+- DIRECT: Match route vs model.
+
+```json
+{
+  "routes":[
+    {
+      "type":"GET",
+      "path":"/matrix",
+      "response":{
+        "model":"dogs:0"
+      }
+    }
+  ]
+}
+```
+
+- MATCH: Match route vs model.
+
+```json
+{
+  "routes":[
+    {
+      "type":"GET",
+      "path":"/matrix",
+      "response":{
+        "model":"dogs:0"
+      }
+    }
+  ]
+}

@@ -3,7 +3,7 @@ This project is to provide a mock server to accompany the development of a websi
 
 #### Configuration / Run
 
-Set port, go to /config/default.json
+Set server port, go to /config/default.json
 ```json
 {"port":3000}
 ```

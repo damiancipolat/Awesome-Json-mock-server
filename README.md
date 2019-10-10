@@ -1,6 +1,6 @@
 # Json-mock-server
 
-#### ¿ CHow to install ?
+#### How to install?
 Run this command
 
 ```sh

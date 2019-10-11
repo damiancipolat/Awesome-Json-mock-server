@@ -1,6 +1,8 @@
 # Awesome JSON mock server
 This project is to provide a mock server to accompany the development of a website or a mobile application. It allows you to create a functional api-rest server quickly and only by changing configurations.
 
+<img src="https://github.com/damiancipolat/Awesome-Json-mock-server/blob/master/doc/awesome.jpg?raw=true" width="300px" align="right" />
+
 #### Configuration / Run
 
 Set server port, go to /config/default.json

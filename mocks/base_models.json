@@ -1,0 +1,33 @@
+{
+  "models":{
+    "dogs":[
+      {
+        "name":"chispas",
+        "country":"england",
+        "colour":"brown"
+      },
+      {
+        "name":"billy",
+        "country":"usa",
+        "colour":"gray"
+      }      
+    ],
+    "friends":[
+      {
+        "name":"Billy",
+        "surname":"Johnson",
+        "age":21
+      },
+      {
+        "name":"Bart",
+        "surname":"Simpson",
+        "age":20
+      },
+      {
+        "name":"Susan",
+        "surname":"Popo",
+        "age":50
+      }
+    ]
+  }
+}

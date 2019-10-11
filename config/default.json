@@ -1,4 +1,7 @@
 {
   "port":"5000",
-  "mockFile":"base.json"
+  "mocks":{
+    "models":"base_models.json",
+    "routes":"base_routes.json"
+  }
 }

@@ -1,6 +1,14 @@
 //Load base mocks.
 const config = require('config');
-const mocks  = require('../mocks/'+config.get('mockFile'));
+
+//Load json files.
+const { 
+  models 
+} = require('../mocks/'+config.get('mocks.models'));
+
+const { 
+  routes 
+} = require('../mocks/'+config.get('mocks.routes'));
 
 const {
   isEquivalent
@@ -95,16 +103,16 @@ const routeController = (routeParam,models) => (req,res)=>{
       options,
       http
     } = routeParam.response;
-    
-    //* RANDOM response - return randomized model responses.
+
+    //RANDOM response - return randomized model responses.
     if (isRandom&&model)
       random(res,models,model,http);
 
-    //* MATCH response - match response with a custom model response.
+    //MATCH response - match response with a custom model response.
     if (isMatch)
       match(req,res,models,options);
 
-    //* Direct response - return a response matching path with model.
+    //DIRECT response - return a response matching path with model.
     if ((!isMatch)&&(!isRandom))
       direct(res,models,model,http);
 
@@ -119,22 +127,22 @@ const routeController = (routeParam,models) => (req,res)=>{
 //Generate routes using the base json.
 const bindRoutes = (router)=>{
 
-  mocks.routes.forEach((route)=>{
+  routes.forEach((route)=>{
 
     if (route.type=='GET')
-      router.get(route.path,routeController(route,mocks.models));
+      router.get(route.path,routeController(route,models));
 
     if (route.type=='POST')
-      router.post(route.path,routeController(route,mocks.models));
+      router.post(route.path,routeController(route,models));
 
     if (route.type=='PUT')
-      router.put(route.path,routeController(route,mocks.models));    
+      router.put(route.path,routeController(route,models));    
 
     if (route.type=='DELETE')
-      router.delete(route.path,routeController(route,mocks.models));    
+      router.delete(route.path,routeController(route,models));    
 
     if (route.type=='PATCH')
-      router.patch(route.path,routeController(route,mocks.models));
+      router.patch(route.path,routeController(route,models));
     
   });
 

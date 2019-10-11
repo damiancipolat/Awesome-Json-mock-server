@@ -12,7 +12,8 @@ const onServerError = ()=>{
 const onListen = (port)=>{
 
   console.log('ᕦ(ò_óˇ)ᕤ - Mock server');
-  console.log(`Running on port: ${port} - mock file: ${config.get('mockFile')}`);
+  console.log(`Running on port: ${port}`);
+  console.log(`MOCK file: ${config.get('mocks.models')} / ROUTE file: ${config.get('mocks.routes')}`);
   
 }
 

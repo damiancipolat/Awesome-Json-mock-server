@@ -9,13 +9,16 @@ Set server port, go to /config/default.json
 ```json
 {
   "port":3000,
-  "mockFile":"base.json"
+  "mocks":{
+    "models":"base_models.json",
+    "routes":"base_routes.json"
+  }
 }
 ```
 port: server bind socket port.
 
-mockFile: is the file used to load the mock metadata.
-
+**models:** Is the file where the response are provided.
+**routes:** Is the file where the route params are defined.
 
 To install:
 ```sh

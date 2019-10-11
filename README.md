@@ -38,8 +38,13 @@ To customize the mock to provide the server with data, change the file /mocks/ba
 This is the file format, is divided in models and routes.
 
 ```json
+#Response models format.
 {
-  "models":{...},
+  "models":{...}
+}
+
+#Routes file format.
+{
   "routes":[...]
 }
 ```
